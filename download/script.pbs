@@ -1,0 +1,14 @@
+#PBS -N jop1
+#PBS -q faceoff
+#PBS -o job1.output.$PBS_JOBID
+#PBS -j oe
+#PBS -l nodes=1:ppn=4
+#PBS -l mem=18gb
+#PBS -l walltime=48:00:00
+
+cd $PBS_O_WORKDIR
+PATH=$PBS_O_PATH
+
+java SampleJavaProgram
+
+hostname
